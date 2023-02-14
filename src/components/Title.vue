@@ -27,6 +27,9 @@ export default {
 .names-container {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
+
+	animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 1s; /* don't forget to set a duration! */
 }
 .name {
 	margin-top: 100px;

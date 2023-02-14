@@ -3,7 +3,7 @@
 		<!-- :autoplay="100"
         :transition="1000"> -->
 		<Carousel
-			:itemsToShow="20"
+			:itemsToShow="8"
 			:wrapAround="true"
 			:autoplay="1000"
 			:transition="500">
