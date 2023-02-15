@@ -1,5 +1,5 @@
 <template>
-	<div height="300px">
+	<div :class="mirror ? 'icon-carousel-main mirror' : 'icon-carousel-main'">
 		<!-- :autoplay="100"
         :transition="1000"> -->
 		<Carousel
@@ -12,6 +12,7 @@
 				:key="icon">
 				<div class="icon-item">
 					<Icon
+						:horizontalFlip="mirror"
 						:icon="icon"
 						class="icon-class" />
 				</div>
@@ -27,6 +28,7 @@ import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
 	name: "Autoplay",
+	props: { mirror: { type: Boolean, default: false } },
 	components: {
 		Carousel,
 		Slide,
@@ -60,6 +62,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.icon-carousel-main {
+	height: 70px;
+}
+.mirror {
+	transform: scale(-1, 1);
+}
 .icon-item {
 	padding: 4px;
 }
