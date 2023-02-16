@@ -29,4 +29,7 @@ const state = computed(() => {
 		:cursorBlinkInterval="500"
 		:reverseDelay="10" />
 	<AboutMe :state="state" />
+	<IconCarousel
+		:state="state"
+		mirror />
 </template>
