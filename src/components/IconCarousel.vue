@@ -3,7 +3,7 @@
 		<!-- :autoplay="100"
         :transition="1000"> -->
 		<Carousel
-			:itemsToShow="state.mobileVersion ? 5 : 8"
+			:itemsToShow="state.mobileVersion ? 12 : 8"
 			:wrapAround="true"
 			:autoplay="1000"
 			:transition="500">
@@ -12,6 +12,7 @@
 				:key="icon">
 				<div class="icon-item">
 					<Icon
+						:width="state.mobileVersion ? 28 : 40"
 						:horizontalFlip="mirror"
 						:icon="icon"
 						class="icon-class" />
@@ -73,9 +74,6 @@ export default defineComponent({
 }
 .icon-item {
 	padding: 4px;
-}
-.icon-class {
-	font-size: 40px;
 }
 .carousel__slide {
 	padding: 5px;
