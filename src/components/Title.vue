@@ -41,14 +41,14 @@ export default {
 .name-mobile {
 	margin-top: 100px;
 	color: rgb(135, 135, 135);
-	font-size: 100px;
+	font-size: 85px;
 }
 .surname {
 	font-size: 160px;
 	color: v-bind("state.colorMain");
 }
 .surname-mobile {
-	font-size: 100px;
+	font-size: 85px;
 	color: v-bind("state.colorMain");
 }
 .avatar {
@@ -63,8 +63,8 @@ export default {
 	border: 5px solid v-bind("state.colorMain");
 }
 .avatar-mobile {
-	margin-top: -90px;
-	margin-bottom: -65px;
+	margin-top: -80px;
+	margin-bottom: -55px;
 	position: relative;
 	width: 120px;
 	height: 120px;
