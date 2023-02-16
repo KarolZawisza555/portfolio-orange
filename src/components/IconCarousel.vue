@@ -3,7 +3,7 @@
 		<!-- :autoplay="100"
         :transition="1000"> -->
 		<Carousel
-			:itemsToShow="8"
+			:itemsToShow="state.mobileVersion ? 5 : 8"
 			:wrapAround="true"
 			:autoplay="1000"
 			:transition="500">
@@ -28,7 +28,10 @@ import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
 	name: "Autoplay",
-	props: { mirror: { type: Boolean, default: false } },
+	props: {
+		mirror: { type: Boolean, default: false },
+		state: { type: Object, required: true },
+	},
 	components: {
 		Carousel,
 		Slide,
@@ -101,7 +104,7 @@ export default defineComponent({
 }
 
 .carousel__slide--active {
-	color: rgb(230, 74, 25);
+	color: v-bind("state.colorMain");
 	opacity: 1;
 	transform: rotateY(0) scale(1.2);
 }

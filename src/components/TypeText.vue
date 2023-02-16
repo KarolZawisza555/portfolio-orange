@@ -39,6 +39,7 @@ export default {
 			type: String,
 			default: "|",
 		},
+		state: { type: Object, required: true },
 	},
 	data() {
 		return {
@@ -107,13 +108,13 @@ export default {
 	padding-top: 18px;
 	padding-right: 18px;
 	position: relative;
-	color: rgb(230, 74, 25);
+	color: v-bind("state.colorMain");
 	font-size: 60px;
 	height: 60px;
 	font-family: monospace;
 	white-space: nowrap;
 	overflow: hidden;
-	border-right: 2px solid rgb(230, 74, 25);
+	border-right: 2px solid v-bind("state.colorMain");
 }
 
 .typewriter-cursor {
