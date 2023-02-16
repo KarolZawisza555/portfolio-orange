@@ -2,6 +2,8 @@
 	<div>
 		<div
 			v-motion-slide-visible-once-right
+			:delay="800"
+			:tapped="{ scale: 1.2 }"
 			class="my-projects">
 			<div class="description">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus

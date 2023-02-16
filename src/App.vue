@@ -9,10 +9,23 @@ import TypeText from "./components/TypeText.vue";
 import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
 
+const randomNum = Math.floor(Math.random() * 10) + 1;
+const colorList = [
+	"rgb(51,85,200)",
+	"rgb(97,228,8)",
+	"rgb(20,143,94)",
+	"rgb(233,17,51)",
+	"rgb(32,194,240)",
+	"rgb(253, 19, 42)",
+	"rgb(88,178,222)",
+	"rgb(209,183,88)",
+	"rgb(66, 165, 246)",
+	"rgb(73,141,176)",
+];
 const { width, height } = useWindowSize();
 const state = computed(() => {
 	return {
-		colorMain: "rgb(20,250,194)",
+		colorMain: colorList[randomNum],
 		colorLight: "rgb(135,135,135)",
 		mobileVersion: width.value < 720,
 	};

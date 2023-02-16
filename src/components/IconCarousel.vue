@@ -3,9 +3,9 @@
 		<!-- :autoplay="100"
         :transition="1000"> -->
 		<Carousel
-			:itemsToShow="state.mobileVersion ? 12 : 8"
+			:itemsToShow="state.mobileVersion ? 12 : 16"
 			:wrapAround="true"
-			:autoplay="1000"
+			:autoplay="3000"
 			:transition="500">
 			<Slide
 				v-for="icon in iconList"
