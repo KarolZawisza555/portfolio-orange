@@ -9,7 +9,7 @@ import TypeText from "./components/TypeText.vue";
 import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
 
-const randomNum = Math.floor(Math.random() * 10) + 1;
+const randomNum = Math.floor(Math.random() * 10);
 const colorList = [
 	"rgb(51,85,200)",
 	"rgb(97,228,8)",
