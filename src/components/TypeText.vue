@@ -109,8 +109,8 @@ export default {
 	padding-right: 18px;
 	position: relative;
 	color: v-bind("state.colorMain");
-	font-size: 50px;
-	height: 60px;
+	font-size: 40px;
+	height: 50px;
 	font-family: monospace;
 	white-space: nowrap;
 	overflow: hidden;

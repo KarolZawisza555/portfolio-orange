@@ -6,11 +6,13 @@ import NavBar from "./components/NavBar.vue";
 import Title from "./components/Title.vue";
 import AboutMe from "./components/AboutMe.vue";
 import TypeText from "./components/TypeText.vue";
+import HorizontalLine from "./components/HorizontalLine.vue";
+import MyProjects from "./components/MyProjects.vue";
 
 const { width, height } = useWindowSize();
 const state = computed(() => {
 	return {
-		colorMain: "rgb(210,250,4)",
+		colorMain: "rgb(20,250,194)",
 		colorLight: "rgb(135,135,135)",
 		mobileVersion: width.value < 720,
 	};
@@ -20,6 +22,7 @@ const state = computed(() => {
 <template>
 	<NavBar />
 	<Title :state="state" />
+	<!-- <HorizontalLine :state="state" /> -->
 	<IconCarousel :state="state" />
 	<TypeText
 		text="/about-me"
@@ -29,6 +32,14 @@ const state = computed(() => {
 		:cursorBlinkInterval="500"
 		:reverseDelay="10" />
 	<AboutMe :state="state" />
+	<TypeText
+		text="/my-projects"
+		loop
+		:state="state"
+		:delay="500"
+		:cursorBlinkInterval="500"
+		:reverseDelay="10" />
+	<MyProjects :state="state" />
 	<IconCarousel
 		:state="state"
 		mirror />
