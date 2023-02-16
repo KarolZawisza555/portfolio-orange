@@ -14,10 +14,10 @@ export default {
 <style scoped>
 .about-me {
 	border: 3px solid v-bind("state.colorMain");
-	width: 500px;
+	width: 100%px;
 	border-radius: 5px;
 	padding: 20px;
 	margin-left: 20px;
-	margin-left: 20px;
+	margin-right: 20px;
 }
 </style>
