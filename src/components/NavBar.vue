@@ -36,6 +36,7 @@ export default {
 <style>
 .container-nav {
 	display: flex;
+	margin-top: 5px;
 }
 .container-mail {
 	display: flex;
@@ -43,6 +44,7 @@ export default {
 }
 .icon-linkedin {
 	font-size: 40px;
+	margin-left: 5px;
 }
 .icon-github {
 	font-size: 40px;
@@ -51,6 +53,7 @@ export default {
 .icon-mail {
 	font-size: 40px;
 	color: rgb(135, 135, 135);
+	margin-right: 5px;
 }
 .w-50 {
 	width: 50%;

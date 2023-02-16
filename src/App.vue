@@ -10,7 +10,8 @@ import TypeText from "./components/TypeText.vue";
 const { width, height } = useWindowSize();
 const state = computed(() => {
 	return {
-		colorMain: "rgb(102,210,100)",
+		colorMain: "rgb(210,250,4)",
+		colorLight: "rgb(135,135,135)",
 		mobileVersion: width.value < 720,
 	};
 });
@@ -21,10 +22,10 @@ const state = computed(() => {
 	<Title :state="state" />
 	<IconCarousel :state="state" />
 	<TypeText
-		text="About me"
+		text="/about-me"
 		loop
 		:state="state"
-		:delay="200"
+		:delay="500"
 		:cursorBlinkInterval="500"
 		:reverseDelay="10" />
 	<AboutMe :state="state" />
