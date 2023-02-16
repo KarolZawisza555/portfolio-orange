@@ -109,7 +109,7 @@ export default {
 	padding-right: 18px;
 	position: relative;
 	color: v-bind("state.colorMain");
-	font-size: 60px;
+	font-size: 50px;
 	height: 60px;
 	font-family: monospace;
 	white-space: nowrap;

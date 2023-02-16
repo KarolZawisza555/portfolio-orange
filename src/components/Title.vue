@@ -62,6 +62,7 @@ export default {
 }
 .work-title-mobile {
 	margin-top: -20px;
+	line-height: 45px;
 	font-size: 45px;
 	color: v-bind("state.colorLight");
 }
