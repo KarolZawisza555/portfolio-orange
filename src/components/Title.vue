@@ -7,6 +7,9 @@
 				<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
 					Zawisza
 				</p>
+				<p :class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
+					Frontend developer
+				</p>
 			</div>
 		</div>
 	</div>
@@ -50,6 +53,17 @@ export default {
 .surname-mobile {
 	font-size: 85px;
 	color: v-bind("state.colorMain");
+}
+.work-title {
+	margin-top: -23px;
+	line-height: 80px;
+	font-size: 80px;
+	color: v-bind("state.colorLight");
+}
+.work-title-mobile {
+	margin-top: -20px;
+	font-size: 45px;
+	color: v-bind("state.colorLight");
 }
 .avatar {
 	margin-top: -120px;
