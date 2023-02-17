@@ -11,9 +11,9 @@
 					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
 					xyz="fade down flip-up-70%">
 					<div
+						v-if="showTitle"
 						class="square"
-						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'"
-						v-if="showTitle">
+						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
 						Frontend developer
 					</div>
 				</XyzTransition>
@@ -25,7 +25,13 @@
 <script>
 export default {
 	name: "Title",
-	props: { state: { type: Object, required: true } },
+	props: {
+		state: { type: Object, required: true },
+		textDelay: {
+			type: Number,
+			default: 2000,
+		},
+	},
 	data() {
 		return {
 			showTitle: false,
@@ -35,7 +41,7 @@ export default {
 		showTitleAfter() {
 			setTimeout(() => {
 				this.showTitle = true;
-			}, 2000);
+			}, this.textDelay);
 		},
 	},
 	created() {
@@ -73,14 +79,25 @@ export default {
 	font-size: 85px;
 	color: v-bind("state.colorMain");
 }
+.work-div {
+	min-height: 140px;
+	margin-top: -70px;
+	margin-bottom: 40px;
+}
 .work-title {
-	margin-top: -23px;
+	margin-top: -75px;
+	margin-bottom: 40px;
 	line-height: 80px;
 	font-size: 80px;
 	color: v-bind("state.colorLight");
 }
+.work-div-mobile {
+	min-height: 50px;
+	margin-top: -30px;
+	margin-bottom: 20px;
+}
 .work-title-mobile {
-	margin-top: -20px;
+	/* margin-top: -20px; */
 	line-height: 45px;
 	font-size: 45px;
 	color: v-bind("state.colorLight");
@@ -111,15 +128,5 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.work-div {
-	min-height: 50px;
-	margin-top: -70px;
-	margin-bottom: 40px;
-}
-.work-div-mobile {
-	min-height: 50px;
-	margin-top: -30px;
-	margin-bottom: 20px;
 }
 </style>

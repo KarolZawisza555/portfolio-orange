@@ -35,6 +35,10 @@ export default {
 			type: Number,
 			default: 500,
 		},
+		textDelay: {
+			type: Number,
+			default: 3000,
+		},
 		cursorChar: {
 			type: String,
 			default: "|",
@@ -45,7 +49,6 @@ export default {
 		return {
 			displayText: "",
 			cursorVisible: false,
-			textDelay: 3000,
 		};
 	},
 	mounted() {
