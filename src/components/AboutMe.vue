@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="about-me-container">
 		<div class="about-me">
 			<div :class="state.mobileVersion ? 'description-mobile' : 'description'">
 				Engineer with a passion for IT and ways to increase productivity. I have
@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style scoped>
+.about-me-container {
+	margin-top: 50px;
+	min-height: 500px;
+}
 .about-me {
 	display: flex;
 	justify-content: center;

@@ -8,7 +8,7 @@ import AboutMe from "./components/AboutMe.vue";
 import TypeText from "./components/TypeText.vue";
 import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
-import Animation from "./components/Animation.vue";
+import Footer from "./components/Footer.vue";
 
 const key = ref(1);
 const randomNum = Math.floor(Math.random() * 10);
@@ -44,7 +44,6 @@ const state = computed(() => {
 			<IconCarousel
 				:state="state"
 				mirror />
-			<HorizontalLine :state="state" />
 			<TypeText
 				text="/about-me"
 				loop
@@ -63,7 +62,8 @@ const state = computed(() => {
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
-			<IconCarousel :state="state" />
+			<!-- <IconCarousel :state="state" /> -->
+			<Footer :state="state" />
 		</div>
 	</XyzTransition>
 </template>
