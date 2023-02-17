@@ -41,13 +41,16 @@ const state = computed(() => {
 		<div xyz="fade flip-down stagger duration-20 delay-2 ease-out-back">
 			<NavBar />
 			<Title :state="state" />
-			<IconCarousel :state="state" />
+			<IconCarousel
+				:state="state"
+				mirror />
 			<HorizontalLine :state="state" />
 			<TypeText
 				text="/about-me"
 				loop
 				:state="state"
 				:delay="500"
+				:textDelay="3000"
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<AboutMe :state="state" />
@@ -60,9 +63,7 @@ const state = computed(() => {
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
-			<IconCarousel
-				:state="state"
-				mirror />
+			<IconCarousel :state="state" />
 		</div>
 	</XyzTransition>
 </template>

@@ -16,8 +16,11 @@
 		"@vueuse/motion": "^2.0.0-beta.12",
 		"add": "^2.0.6",
 		"animate.css": "^4.1.1",
+		"primeicons": "^6.0.1",
+		"primevue": "^3.23.0",
 		"scenejs": "^1.9.4",
 		"vue": "^3.2.45",
+		"vue-awesome-paginate": "^1.1.46",
 		"vue-slick-carousel": "^1.0.6",
 		"vue3-carousel": "^0.2.9"
 	},

@@ -1,90 +1,203 @@
 <template>
-	<div>
-		<div
-			v-motion-slide-visible-once-right
-			:delay="800"
-			class="my-projects">
-			<div :class="state.mobileVersion ? 'description-mobile' : 'description'">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-				aliquid neque quod vitae optio rerum provident. Hic odit est voluptatem,
-				facere iusto voluptates dolore. Voluptatum repellendus praesentium vitae
-				sequi inventore, veritatis nisi ea molestiae harum veniam eos
-				repudiandae, porro nesciunt maxime ullam. Totam distinctio soluta harum
-				accusantium voluptatum laudantium officiis esse. Autem numquam
-				laboriosam molestiae asperiores, expedita accusantium reiciendis
-				temporibus repellat unde. Repellendus excepturi voluptas tempora
-				voluptate sint iusto, enim sed doloremque quisquam hic, id at, atque
-				vitae unde sunt quibusdam sit sapiente corporis maiores natus. At iure
-				iusto explicabo sint autem sunt ea dolores laudantium eaque nobis
-				tempora repellendus ducimus ratione ipsum aut facere aspernatur
-				consequuntur quia voluptatum tempore natus, fugit repudiandae harum.
-				Magnam incidunt culpa doloremque quis tempore voluptatum quaerat
-				consequatur temporibus deserunt excepturi consequuntur nam quia
-				obcaecati ad consectetur placeat impedit mollitia quidem ea quisquam at,
-				laboriosam quae velit. Ea, saepe possimus? Perspiciatis debitis,
-				provident omnis consectetur magnam unde esse eos facere eveniet aperiam
-				enim accusantium ratione quaerat quidem saepe sequi recusandae minima
-				velit architecto illo, incidunt tenetur ducimus pariatur? Corrupti saepe
-				nihil earum suscipit sit non, quas cum facere ipsam tempore expedita
-				eos, reiciendis aperiam maxime numquam hic illum culpa ad nostrum
-				provident consequuntur maiores. Numquam illo dolorum exercitationem
-				cupiditate nemo ipsum mollitia officia veniam ipsa, sapiente explicabo
-				nam dicta quod quasi veritatis voluptatibus, qui nisi?
-			</div>
-		</div>
+	<div class="my-projects-container">
+		<Carousel
+			v-model="currentSlide"
+			:itemsToShow="state.mobileVersion ? 1 : 3"
+			:wrapAround="true"
+			:autoplay="3000"
+			:transition="500">
+			<Slide
+				v-for="project in projectList"
+				:key="project.title">
+				<Card class="project-card">
+					<template #header>
+						<img
+							:src="project.image"
+							style="height: 15rem" />
+					</template>
+					<template #title>
+						<div class="mainColor">{{ project.title }}</div>
+					</template>
+					<template #content>
+						<p class="mainColor">
+							{{ project.title }}
+						</p>
+					</template>
+					<template #footer>
+						<div class="card-buttons">
+							<Button
+								label="Github"
+								class="button-github" />
+							<Button
+								label="Online"
+								class="button-online" />
+						</div>
+					</template>
+				</Card>
+			</Slide>
+		</Carousel>
 	</div>
 </template>
 
 <script>
+import { Carousel, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+
 export default {
 	name: "MyProjects",
 	props: { state: { type: Object, required: true } },
+	components: {
+		Carousel,
+		Slide,
+	},
+	data() {
+		return {
+			currentSlide: 1,
+			projectList: [
+				{
+					title: "title",
+					description: "lorem4",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+				},
+				{
+					title: "title2",
+					description: "lorem4",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+				},
+				{
+					title: "title3",
+					description: "lorem4",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+				},
+				{
+					title: "title4",
+					description: "lorem4",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+				},
+				{
+					title: "title5",
+					description: "lorem4",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+				},
+			],
+		};
+	},
 };
 </script>
 
 <style scoped>
-.my-projects {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 70px;
+.my-projects-container {
+	padding-top: 20px;
+	padding-bottom: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	max-width: 100%;
 }
-.description {
-	font-size: 26px;
-	line-height: 38px;
-	width: 100%;
-	padding: 0px;
-	margin-left: 20px;
-	margin-right: 20px;
-	max-width: 1000px;
-	padding: 20px;
-	border: 5px solid;
-	border-image: linear-gradient(
-		to top,
-		v-bind("state.colorLight") 0%,
-		v-bind("state.colorMain") 50%,
-		v-bind("state.colorMain") 51%,
-		v-bind("state.colorLight") 100%
-	);
-	border-image-slice: 1;
+.project-card {
+	margin: 20px;
+	max-width: 400px;
+	min-width: 250px;
+	background-color: #3c3d43;
 }
-.description-mobile {
-	font-size: 16px;
-	line-height: 30px;
-	width: 100%;
-	padding: 0px;
-	margin-left: 5px;
+.button-github {
+	background-color: transparent;
+	border: 2px solid v-bind("state.colorMain");
 	margin-right: 5px;
-	max-width: 1000px;
-	padding: 5px;
-	border: 5px solid;
-	border-image: linear-gradient(
-		to top,
-		v-bind("state.colorLight") 0%,
-		v-bind("state.colorMain") 50%,
-		v-bind("state.colorMain") 51%,
-		v-bind("state.colorLight") 100%
-	);
-	border-image-slice: 1;
+	color: v-bind("state.colorMain");
+}
+.button-online {
+	background-color: transparent;
+	border: 2px solid v-bind("state.colorMain");
+	color: v-bind("state.colorMain");
+}
+.mainColor {
+	color: v-bind("state.colorMain");
+}
+.lightColor {
+	color: v-bind("state.colorLight");
+}
+.carousel__slide {
+	padding: 0px;
+}
+.card-buttons {
+	padding-bottom: 10px;
+}
+
+.carousel__viewport {
+	perspective: 3000px;
+}
+
+.carousel__track {
+	transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+	transition: 0.5s;
+}
+
+.carousel__slide {
+	opacity: 1;
+	transform: rotateY(-20deg) scale(0.8);
+}
+
+.carousel__slide--prev {
+	opacity: 1;
+	transform: rotateY(-10deg) scale(0.8);
+}
+
+.carousel__slide--active {
+	opacity: 1;
+	transform: rotateY(0) scale(1.1);
+}
+.carousel__slide--active ~ .carousel__slide {
+	transform: rotateY(20deg) scale(0.8);
+}
+.carousel__slide--next {
+	opacity: 1;
+	transform: rotateY(10deg) scale(0.8);
+}
+.carousel__prev,
+.carousel__next {
+	box-sizing: content-box;
+	border: 5px solid white;
+}
+.pagination-container {
+	display: flex;
+	column-gap: 10px;
+}
+.paginate-buttons {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(217, 217, 217);
+	color: black;
+}
+.paginate-buttons:hover {
+	background-color: #d8d8d8;
+}
+.active-page {
+	background-color: #3498db;
+	border: 1px solid #3498db;
+	color: white;
+}
+.active-page:hover {
+	background-color: #2988c8;
 }
 </style>
