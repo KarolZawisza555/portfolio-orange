@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .about-me-container {
 	margin-top: 50px;
-	min-height: 400px;
+	min-height: 300px;
 }
 .about-me {
 	display: flex;
