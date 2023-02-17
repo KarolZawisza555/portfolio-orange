@@ -10,10 +10,13 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@animxyz/core": "^0.6.6",
+		"@animxyz/vue3": "^0.6.7",
 		"@vueuse/core": "^9.12.0",
 		"@vueuse/motion": "^2.0.0-beta.12",
 		"add": "^2.0.6",
 		"animate.css": "^4.1.1",
+		"scenejs": "^1.9.4",
 		"vue": "^3.2.45",
 		"vue-slick-carousel": "^1.0.6",
 		"vue3-carousel": "^0.2.9"

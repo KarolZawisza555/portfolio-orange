@@ -57,7 +57,7 @@ export default {
 	border-image-slice: 1;
 }
 .description-mobile {
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 30px;
 	width: 100%;
 	padding: 0px;

@@ -8,7 +8,9 @@ import AboutMe from "./components/AboutMe.vue";
 import TypeText from "./components/TypeText.vue";
 import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
+import Animation from "./components/Animation.vue";
 
+const key = ref(1);
 const randomNum = Math.floor(Math.random() * 10);
 const colorList = [
 	"rgb(51,85,200)",
@@ -33,27 +35,35 @@ const state = computed(() => {
 </script>
 
 <template>
-	<NavBar />
-	<Title :state="state" />
-	<!-- <HorizontalLine :state="state" /> -->
-	<IconCarousel :state="state" />
-	<TypeText
-		text="/about-me"
-		loop
-		:state="state"
-		:delay="500"
-		:cursorBlinkInterval="500"
-		:reverseDelay="10" />
-	<AboutMe :state="state" />
-	<TypeText
-		text="/my-projects"
-		loop
-		:state="state"
-		:delay="500"
-		:cursorBlinkInterval="500"
-		:reverseDelay="10" />
-	<MyProjects :state="state" />
-	<IconCarousel
-		:state="state"
-		mirror />
+	<XyzTransition
+		appear
+		duration="auto">
+		<div
+			class="page-wrap"
+			xyz="fade flip-down stagger duration-10 delay-2 ease-out-back">
+			<NavBar />
+			<Title :state="state" />
+			<!-- <HorizontalLine :state="state" /> -->
+			<IconCarousel :state="state" />
+			<TypeText
+				text="/about-me"
+				loop
+				:state="state"
+				:delay="500"
+				:cursorBlinkInterval="500"
+				:reverseDelay="10" />
+			<AboutMe :state="state" />
+			<TypeText
+				text="/my-projects"
+				loop
+				:state="state"
+				:delay="500"
+				:cursorBlinkInterval="500"
+				:reverseDelay="10" />
+			<MyProjects :state="state" />
+			<IconCarousel
+				:state="state"
+				mirror />
+		</div>
+	</XyzTransition>
 </template>
