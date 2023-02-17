@@ -64,6 +64,13 @@ const state = computed(() => {
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
 			<!-- <IconCarousel :state="state" /> -->
+			<TypeText
+				text="/my-experience"
+				loop
+				:state="state"
+				:delay="500"
+				:cursorBlinkInterval="500"
+				:reverseDelay="10" />
 			<Work :state="state" />
 			<Footer :state="state" />
 		</div>

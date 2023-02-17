@@ -15,6 +15,7 @@ import Card from 'primevue/card';
 import Button from 'primevue/button';
 import Accordion  from 'primevue/accordion';
 import AccordionTab  from 'primevue/accordiontab';
+import Fieldset   from 'primevue/fieldset';
 import VueAwesomePaginate from "vue-awesome-paginate";
 
 const app = createApp(App);
@@ -24,7 +25,8 @@ app.use(PrimeVue)
 app.use(VueAwesomePaginate)
 app.component('Icon',Icon)
 app.component('Card',Card)
+app.component('Fieldset ',Fieldset )
 app.component('Button',Button)
-app.component('Accordion ',Accordion )
-app.component('AccordionTab ',AccordionTab )
+app.component('Accordion',Accordion )
+app.component('AccordionTab',AccordionTab )
 app.mount("#app")
