@@ -8,6 +8,7 @@ import AboutMe from "./components/AboutMe.vue";
 import TypeText from "./components/TypeText.vue";
 import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
+import Work from "./components/Work.vue";
 import Footer from "./components/Footer.vue";
 
 const key = ref(1);
@@ -63,6 +64,7 @@ const state = computed(() => {
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
 			<!-- <IconCarousel :state="state" /> -->
+			<Work :state="state" />
 			<Footer :state="state" />
 		</div>
 	</XyzTransition>

@@ -11,10 +11,11 @@ import { MotionPlugin } from '@vueuse/motion'
 import VueAnimXyz from '@animxyz/vue3'
 import '@animxyz/core'
 import PrimeVue from 'primevue/config';
-import Card from 'primevue/card/sfc';
+import Card from 'primevue/card';
 import Button from 'primevue/button';
+import Accordion  from 'primevue/accordion';
+import AccordionTab  from 'primevue/accordiontab';
 import VueAwesomePaginate from "vue-awesome-paginate";
-import "vue-awesome-paginate/dist/style.css";
 
 const app = createApp(App);
 app.use(MotionPlugin)
@@ -24,4 +25,6 @@ app.use(VueAwesomePaginate)
 app.component('Icon',Icon)
 app.component('Card',Card)
 app.component('Button',Button)
+app.component('Accordion ',Accordion )
+app.component('AccordionTab ',AccordionTab )
 app.mount("#app")

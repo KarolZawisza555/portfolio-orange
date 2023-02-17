@@ -8,16 +8,18 @@
 					Zawisza
 				</p>
 			</div>
-			<XyzTransition
-				:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
-				xyz="fade down flip-up-70%">
-				<div
-					v-if="showTitle"
-					class="square"
-					:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
-					Frontend developer
-				</div>
-			</XyzTransition>
+			<div class="work-box">
+				<XyzTransition
+					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
+					xyz="fade down flip-up-70%">
+					<div
+						v-if="showTitle"
+						class="square"
+						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
+						Frontend developer
+					</div>
+				</XyzTransition>
+			</div>
 		</div>
 	</div>
 </template>
@@ -74,30 +76,27 @@ export default {
 .surname {
 	font-size: 160px;
 	color: v-bind("state.colorMain");
+	margin-bottom: 90px;
 }
 .surname-mobile {
 	font-size: 85px;
 	color: v-bind("state.colorMain");
 }
+.work-box {
+	min-height: 140px;
+}
 .work-div {
 	min-height: 140px;
-	margin-top: -70px;
-	margin-bottom: 40px;
 }
 .work-title {
-	margin-top: -75px;
-	margin-bottom: 40px;
 	line-height: 80px;
 	font-size: 80px;
 	color: v-bind("state.colorLight");
 }
 .work-div-mobile {
 	min-height: 50px;
-	margin-top: -30px;
-	margin-bottom: 20px;
 }
 .work-title-mobile {
-	/* margin-top: -20px; */
 	line-height: 45px;
 	font-size: 45px;
 	color: v-bind("state.colorLight");
