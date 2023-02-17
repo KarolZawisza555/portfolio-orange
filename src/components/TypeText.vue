@@ -106,7 +106,7 @@ export default {
 .text-type-container {
 	display: flex;
 	justify-content: center;
-	padding: 10px;
+	padding: 20px;
 }
 .typewriter {
 	display: inline-block;

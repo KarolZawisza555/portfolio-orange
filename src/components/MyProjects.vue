@@ -55,7 +55,7 @@ export default {
 			currentSlide: 1,
 			projectList: [
 				{
-					title: "title",
+					title: "Vuevalidate",
 					description: "lorem4",
 					githubLink: "",
 					onlineLink: "",
@@ -63,7 +63,7 @@ export default {
 						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
 				},
 				{
-					title: "title2",
+					title: "Quasar",
 					description: "lorem4",
 					githubLink: "",
 					onlineLink: "",
@@ -71,7 +71,7 @@ export default {
 						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
 				},
 				{
-					title: "title3",
+					title: "Vuetify & Apex chart",
 					description: "lorem4",
 					githubLink: "",
 					onlineLink: "",
@@ -79,7 +79,7 @@ export default {
 						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
 				},
 				{
-					title: "title4",
+					title: "Portfolio Vuetify",
 					description: "lorem4",
 					githubLink: "",
 					onlineLink: "",
@@ -87,7 +87,7 @@ export default {
 						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
 				},
 				{
-					title: "title5",
+					title: "RegistrationVuelidate",
 					description: "lorem4",
 					githubLink: "",
 					onlineLink: "",
@@ -102,6 +102,7 @@ export default {
 
 <style scoped>
 .my-projects-container {
+	margin-top: 20px;
 	padding-top: 20px;
 	padding-bottom: 50px;
 	margin-left: 10px;
