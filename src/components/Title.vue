@@ -7,17 +7,17 @@
 				<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
 					Zawisza
 				</p>
-				<XyzTransition
-					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
-					xyz="fade down flip-up-70%">
-					<div
-						v-if="showTitle"
-						class="square"
-						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
-						Frontend developer
-					</div>
-				</XyzTransition>
 			</div>
+			<XyzTransition
+				:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
+				xyz="fade down flip-up-70%">
+				<div
+					v-if="showTitle"
+					class="square"
+					:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
+					Frontend developer
+				</div>
+			</XyzTransition>
 		</div>
 	</div>
 </template>
