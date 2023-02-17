@@ -8,7 +8,7 @@
 					Zawisza
 				</p>
 				<XyzTransition
-					class="work-div"
+					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
 					xyz="fade down flip-up-50%">
 					<div
 						class="square"
@@ -119,5 +119,10 @@ export default {
 	min-height: 50px;
 	margin-top: -70px;
 	margin-bottom: 40px;
+}
+.work-div-mobile {
+	min-height: 50px;
+	margin-top: -30px;
+	margin-bottom: 20px;
 }
 </style>
