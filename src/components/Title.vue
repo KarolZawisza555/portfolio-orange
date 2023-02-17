@@ -9,7 +9,7 @@
 				</p>
 				<XyzTransition
 					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
-					xyz="fade down flip-up-50%">
+					xyz="fade down flip-up-70%">
 					<div
 						class="square"
 						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'"
@@ -54,9 +54,6 @@ export default {
 .names-container {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
-
-	/* animation: zoomIn; 
-	animation-duration: 1s;  */
 }
 .name {
 	margin-top: 100px;
