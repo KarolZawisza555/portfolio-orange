@@ -38,13 +38,11 @@ const state = computed(() => {
 	<XyzTransition
 		appear
 		duration="auto">
-		<div
-			class="page-wrap"
-			xyz="fade flip-down stagger duration-10 delay-2 ease-out-back">
+		<div xyz="fade flip-down stagger duration-20 delay-2 ease-out-back">
 			<NavBar />
 			<Title :state="state" />
-			<!-- <HorizontalLine :state="state" /> -->
 			<IconCarousel :state="state" />
+			<HorizontalLine :state="state" />
 			<TypeText
 				text="/about-me"
 				loop
@@ -53,6 +51,7 @@ const state = computed(() => {
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<AboutMe :state="state" />
+			<HorizontalLine :state="state" />
 			<TypeText
 				text="/my-projects"
 				loop

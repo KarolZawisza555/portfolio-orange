@@ -45,14 +45,16 @@ export default {
 		return {
 			displayText: "",
 			cursorVisible: false,
+			textDelay: 3000,
 		};
 	},
 	mounted() {
 		this.cursorInterval = setInterval(() => {
 			this.cursorVisible = !this.cursorVisible;
 		}, this.cursorBlinkInterval);
-
-		this.writeText(this.text);
+		setTimeout(() => {
+			this.writeText(this.text);
+		}, this.textDelay);
 	},
 	beforeUnmount() {
 		clearInterval(this.cursorInterval);

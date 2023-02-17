@@ -7,9 +7,16 @@
 				<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
 					Zawisza
 				</p>
-				<p :class="state.mobileVersion ? 'work-title-mobile' : 'work-title'">
-					Frontend developer
-				</p>
+				<XyzTransition
+					class="work-div"
+					xyz="fade down flip-up-50%">
+					<div
+						class="square"
+						:class="state.mobileVersion ? 'work-title-mobile' : 'work-title'"
+						v-if="showTitle">
+						Frontend developer
+					</div>
+				</XyzTransition>
 			</div>
 		</div>
 	</div>
@@ -19,6 +26,21 @@
 export default {
 	name: "Title",
 	props: { state: { type: Object, required: true } },
+	data() {
+		return {
+			showTitle: false,
+		};
+	},
+	methods: {
+		showTitleAfter() {
+			setTimeout(() => {
+				this.showTitle = true;
+			}, 2000);
+		},
+	},
+	created() {
+		this.showTitleAfter();
+	},
 };
 </script>
 
@@ -92,5 +114,10 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+.work-div {
+	min-height: 50px;
+	margin-top: -70px;
+	margin-bottom: 40px;
 }
 </style>
