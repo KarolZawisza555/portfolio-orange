@@ -73,8 +73,15 @@ const state = computed(() => {
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
-			<!-- <IconCarousel :state="state" /> -->
+			<TypeText
+				text="/my-contact"
+				loop
+				:state="state"
+				:delay="500"
+				:cursorBlinkInterval="500"
+				:reverseDelay="10" />
 			<Contact :state="state" />
+			<IconCarousel :state="state" />
 			<Footer :state="state" />
 		</div>
 	</XyzTransition>
