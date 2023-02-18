@@ -106,7 +106,7 @@ export default {
 .text-type-container {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+	padding: 25px;
 }
 .typewriter {
 	display: inline-block;
@@ -114,8 +114,8 @@ export default {
 	padding-right: 18px;
 	position: relative;
 	color: v-bind("state.colorMain");
-	font-size: 40px;
-	height: 50px;
+	font-size: 36px;
+	height: 46px;
 	font-family: monospace;
 	white-space: nowrap;
 	overflow: hidden;

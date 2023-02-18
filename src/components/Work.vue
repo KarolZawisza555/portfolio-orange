@@ -2,13 +2,16 @@
 	<div class="work-container">
 		<Accordion
 			lazy
-			multiple
 			class="accordion-work">
 			<AccordionTab
 				v-for="tab in tabs"
-				:key="tab.title"
-				:header="tab.title">
-				<p>{{ tab.content }}</p>
+				id="tab.title"
+				:key="tab.title">
+				<template #header>
+					<span class="work-header">{{ tab.title }}</span>
+					<span class="work-header-place">{{ tab.place }}</span>
+				</template>
+				<span class="work-header-text">{{ tab.content }}</span>
 			</AccordionTab>
 		</Accordion>
 	</div>
@@ -21,7 +24,11 @@ export default {
 	data() {
 		return {
 			tabs: [
-				{ title: "Junior Frontend developer", content: "Content 1" },
+				{
+					title: "Junior Frontend developer",
+					place: "Makolab",
+					content: "Content 1",
+				},
 				{ title: "Freelancer", content: "Content 2" },
 				{ title: "Specjalist automation", content: "Content 3" },
 			],
@@ -32,13 +39,21 @@ export default {
 
 <style scoped>
 .work-container {
-	margin: 10px;
 }
 .accordion-work {
 	margin: 10px;
-	background-color: transparent;
 }
-.p-accordion-header-text {
-	color: red;
+.work-header {
+	color: v-bind("state.colorMain");
+	font-weight: bolder;
+	font-size: 26px;
+}
+.work-header-text {
+	color: v-bind("state.colorMain");
+}
+.work-header-place {
+	color: v-bind("state.colorLight");
+	font-size: 26px;
+	margin-left: 10px;
 }
 </style>

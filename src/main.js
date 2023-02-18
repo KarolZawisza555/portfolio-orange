@@ -4,7 +4,7 @@ import App from "./App.vue";
 import { Icon } from '@iconify/vue';
 import 'vue3-carousel/dist/carousel.css'
 import 'animate.css';
-import 'primevue/resources/themes/lara-dark-blue/theme.css';
+import 'primevue/resources/themes/md-dark-indigo/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css ';
 import { MotionPlugin } from '@vueuse/motion'
