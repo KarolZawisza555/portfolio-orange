@@ -1,29 +1,29 @@
 <template>
 	<div class="contact-container">
-		<div class="phone">
+		<p class="phone">
 			<Icon
-				:width="40"
 				icon="mdi-phone"
 				class="contact-icon-class"
+				:width="26"
 				:color="state.colorMain" />
-			<p class="contact-span">570-096-077</p>
-		</div>
-		<div class="email">
+			<span class="contact-span">570-096-077</span>
+		</p>
+		<p class="email">
 			<Icon
 				:width="40"
 				icon="material-symbols:mail-rounded"
 				class="contact-icon-class"
 				:color="state.colorMain" />
-			<p class="contact-span">inz.zawisza.karol@gmail.com</p>
-		</div>
-		<div class="linkedin">
+			<span class="contact-span">inz.zawisza.karol@gmail.com</span>
+		</p>
+		<p class="linkedin">
 			<Icon
 				:width="40"
 				icon="mdi-linkedin"
 				class="contact-icon-class"
 				:color="state.colorMain" />
-			<p class="contact-span">linkedin.com/in/karol-zawisza</p>
-		</div>
+			<span class="contact-span">linkedin.com/in/karol-zawisza</span>
+		</p>
 	</div>
 </template>
 
@@ -55,7 +55,7 @@ export default {
 	width: 100%;
 	margin: auto;
 	color: v-bind("state.colorMain");
-	font-size: 32px;
+	font-size: 20px;
 	line-height: 70px;
 	margin-bottom: 40px;
 }
