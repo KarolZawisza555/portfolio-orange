@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, reactive } from "vue";
+
 import { useWindowSize } from "@vueuse/core";
 import IconCarousel from "./components/IconCarousel.vue";
 import NavBar from "./components/NavBar.vue";
@@ -10,6 +11,7 @@ import HorizontalLine from "./components/HorizontalLine.vue";
 import MyProjects from "./components/MyProjects.vue";
 import Work from "./components/Work.vue";
 import Footer from "./components/Footer.vue";
+import Contact from "./components/Contact.vue";
 
 const key = ref(1);
 const randomNum = Math.floor(Math.random() * 10);
@@ -56,6 +58,14 @@ const state = computed(() => {
 			<AboutMe :state="state" />
 			<HorizontalLine :state="state" />
 			<TypeText
+				text="/my-experience"
+				loop
+				:state="state"
+				:delay="500"
+				:cursorBlinkInterval="500"
+				:reverseDelay="10" />
+			<Work :state="state" />
+			<TypeText
 				text="/my-projects"
 				loop
 				:state="state"
@@ -64,14 +74,7 @@ const state = computed(() => {
 				:reverseDelay="10" />
 			<MyProjects :state="state" />
 			<!-- <IconCarousel :state="state" /> -->
-			<TypeText
-				text="/my-experience"
-				loop
-				:state="state"
-				:delay="500"
-				:cursorBlinkInterval="500"
-				:reverseDelay="10" />
-			<Work :state="state" />
+			<Contact :state="state" />
 			<Footer :state="state" />
 		</div>
 	</XyzTransition>

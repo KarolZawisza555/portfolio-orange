@@ -8,10 +8,25 @@
 				id="tab.title"
 				:key="tab.title">
 				<template #header>
-					<span class="work-header">{{ tab.title }}</span>
-					<span class="work-header-place">{{ tab.place }}</span>
+					<span
+						:class="state.mobileVersion ? 'work-header-mobile' : 'work-header'"
+						>{{ tab.title }}</span
+					>
+					<span
+						:class="
+							state.mobileVersion
+								? 'work-header-place-mobile'
+								: 'work-header-place'
+						"
+						>{{ tab.place }}</span
+					>
 				</template>
-				<span class="work-header-text">{{ tab.content }}</span>
+				<span
+					:class="
+						state.mobileVersion ? 'work-header-text-mobile' : 'work-header-text'
+					"
+					>{{ tab.content }}</span
+				>
 			</AccordionTab>
 		</Accordion>
 	</div>
@@ -38,22 +53,35 @@ export default {
 </script>
 
 <style scoped>
-.work-container {
-}
 .accordion-work {
 	margin: 10px;
+	max-width: 1200px;
+	margin: auto;
 }
 .work-header {
 	color: v-bind("state.colorMain");
 	font-weight: bolder;
 	font-size: 26px;
 }
+.work-header-mobile {
+	color: v-bind("state.colorMain");
+	font-weight: bolder;
+	font-size: 18px;
+}
 .work-header-text {
+	color: v-bind("state.colorMain");
+}
+.work-header-text-mobile {
 	color: v-bind("state.colorMain");
 }
 .work-header-place {
 	color: v-bind("state.colorLight");
 	font-size: 26px;
 	margin-left: 10px;
+}
+.work-header-place-mobile {
+	color: v-bind("state.colorLight");
+	font-size: 18px;
+	margin-left: 11px;
 }
 </style>

@@ -18,6 +18,8 @@ export default {
 	text-align: center;
 	padding: 0;
 	margin: 0;
+	margin-top: 30px;
+	margin-bottom: 20px;
 	color: v-bind("state.colorMain");
 }
 .logo {

@@ -25,14 +25,14 @@ export default {
 
 <style scoped>
 .about-me-container {
-	margin-top: 50px;
+	margin-top: 20px;
 	min-height: 300px;
 }
 .about-me {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 .description {
 	font-size: 26px;
@@ -41,7 +41,7 @@ export default {
 	padding: 0px;
 	margin-left: 20px;
 	margin-right: 20px;
-	max-width: 1000px;
+	max-width: 1200px;
 	padding: 20px;
 	border: 5px solid;
 	border-image: linear-gradient(

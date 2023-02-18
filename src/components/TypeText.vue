@@ -106,12 +106,14 @@ export default {
 .text-type-container {
 	display: flex;
 	justify-content: center;
-	padding: 25px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 .typewriter {
 	display: inline-block;
-	padding-top: 18px;
+	padding-top: 15px;
 	padding-right: 18px;
+	margin-bottom: 18px;
 	position: relative;
 	color: v-bind("state.colorMain");
 	font-size: 36px;
