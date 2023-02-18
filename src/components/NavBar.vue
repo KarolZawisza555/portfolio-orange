@@ -9,6 +9,13 @@
 				class="icon-github" />
 		</div>
 		<div class="container-mail w-50">
+			<a>
+				<Icon
+					@click="changeColor"
+					:color="state.colorMain"
+					icon="ic:round-color-lens"
+					class="icon-mail" />
+			</a>
 			<a href="mailto:inz.zawisza.karol@gmail.com">
 				<Icon
 					icon="material-symbols:mail-rounded"
@@ -21,6 +28,14 @@
 <script>
 export default {
 	name: "Navbar",
+	emits: ["onChangeColor"],
+	props: { state: Object, randomNum: Number },
+	methods: {
+		changeColor() {
+			const nextColor = (this.randomNum + 1) % 10;
+			this.$emit("onChangeColor", nextColor);
+		},
+	},
 	data() {
 		return {
 			links: [

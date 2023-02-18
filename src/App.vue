@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, reactive } from "vue";
+import { ref, computed } from "vue";
 
 import { useWindowSize } from "@vueuse/core";
 import IconCarousel from "./components/IconCarousel.vue";
@@ -13,8 +13,8 @@ import Work from "./components/Work.vue";
 import Footer from "./components/Footer.vue";
 import Contact from "./components/Contact.vue";
 
-const key = ref(1);
-const randomNum = Math.floor(Math.random() * 10);
+const randomNum = ref(1);
+randomNum.value = Math.floor(Math.random() * 10);
 const colorList = [
 	"rgb(51,85,200)",
 	"rgb(97,228,8)",
@@ -28,9 +28,13 @@ const colorList = [
 	"rgb(73,141,176)",
 ];
 const { width, height } = useWindowSize();
+const changeColor = (newValue) => {
+	randomNum.value = Math.floor(Math.random() * 10);
+	console.log(newValue);
+};
 const state = computed(() => {
 	return {
-		colorMain: colorList[randomNum],
+		colorMain: colorList[randomNum.value],
 		colorLight: "rgb(135,135,135)",
 		mobileVersion: width.value < 720,
 	};
@@ -42,7 +46,11 @@ const state = computed(() => {
 		appear
 		duration="auto">
 		<div xyz="fade flip-down stagger duration-20 delay-2 ease-out-back">
-			<NavBar />
+			{{ randomNum }}
+			<NavBar
+				:randomNum="randomNum"
+				:state="state"
+				@on-change-color="changeColor" />
 			<Title :state="state" />
 			<IconCarousel
 				:state="state"
