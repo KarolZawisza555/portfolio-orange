@@ -90,10 +90,14 @@ export default {
 }
 
 .work-header-text {
+	font-size: 26px;
+	line-height: 40px;
 	color: v-bind("state.colorMain");
 }
 
 .work-header-text-mobile {
+	font-size: 16px;
+	line-height: 24px;
 	color: v-bind("state.colorMain");
 }
 
