@@ -1,19 +1,27 @@
 <template>
 	<div class="title-container">
 		<div class="names-container">
-			<XyzTransition
-				appear
-				duration="auto">
-				<div
-					class="avatar-fix"
-					xyz="fade flip-down stagger duration-10 delay-15 ease-out-back">
-					<p :class="state.mobileVersion ? 'name-mobile' : 'name'">Karol</p>
-					<div :class="state.mobileVersion ? 'avatar-mobile' : 'avatar'"></div>
-					<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
+			<div class="avatar-fix">
+				<XyzTransition
+					appear
+					duration="auto">
+					<p
+						xyz="fade flip-down stagger duration-10 delay-15 ease-out-back"
+						:class="state.mobileVersion ? 'name-mobile' : 'name'">
+						Karol
+					</p>
+				</XyzTransition>
+				<div :class="state.mobileVersion ? 'avatar-mobile' : 'avatar'"></div>
+				<XyzTransition
+					appear
+					duration="auto">
+					<p
+						xyz="fade flip-down stagger duration-10 delay-15 ease-out-back"
+						:class="state.mobileVersion ? 'surname-mobile' : 'surname'">
 						Zawisza
 					</p>
-				</div>
-			</XyzTransition>
+				</XyzTransition>
+			</div>
 			<div class="work-box">
 				<XyzTransition
 					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"

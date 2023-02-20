@@ -42,10 +42,23 @@ export default {
 				{
 					title: "Junior Frontend developer",
 					place: "Makolab",
-					content: "Content 1",
+					content: `Work with back-end developers to integrate UI componentswith APIs and databasesGather and refine specifications and requirements based ontechnical requirements or UX designDebug errors, troubleshoot issues, and perform routineperformance optimizationsWrite high-quality, scalable, and reusable code.`,
 				},
-				{ title: "Freelancer", content: "Content 2" },
-				{ title: "Specjalist automation", content: "Content 3" },
+				{
+					title: "Freelancer",
+					place: "self-employment",
+					content: `Developing and maintaining the front-end of websites and web applications using technologies such as HTML, CSS, and JavaScript`,
+				},
+				{
+					title: "Electrical specialist",
+					place: "Strunobet Kuzki",
+					content: `Preparation of technical and technological documentationContact with international clientsCreating 2D CAD diagrams and 3D modelsDesigning power systems in accordance with customerrequirements`,
+				},
+				{
+					title: "Automation foreman",
+					place: "Cerrad Starachowice",
+					content: `Supervising machines and devices in terms ofelectromechanicsDiagnosis of failures and their removalControl and supervision of the production process in SCADA software`,
+				},
 			],
 		};
 	},
@@ -58,27 +71,33 @@ export default {
 	max-width: 1200px;
 	margin: auto;
 }
+
 .work-header {
 	color: v-bind("state.colorMain");
 	font-weight: bolder;
 	font-size: 26px;
 }
+
 .work-header-mobile {
 	color: v-bind("state.colorMain");
 	font-weight: bolder;
 	font-size: 18px;
 }
+
 .work-header-text {
 	color: v-bind("state.colorMain");
 }
+
 .work-header-text-mobile {
 	color: v-bind("state.colorMain");
 }
+
 .work-header-place {
 	color: v-bind("state.colorLight");
 	font-size: 26px;
 	margin-left: 10px;
 }
+
 .work-header-place-mobile {
 	color: v-bind("state.colorLight");
 	font-size: 18px;
