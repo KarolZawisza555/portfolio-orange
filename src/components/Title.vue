@@ -1,13 +1,19 @@
 <template>
 	<div class="title-container">
 		<div class="names-container">
-			<div class="avatar-fix">
-				<p :class="state.mobileVersion ? 'name-mobile' : 'name'">Karol</p>
-				<div :class="state.mobileVersion ? 'avatar-mobile' : 'avatar'"></div>
-				<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
-					Zawisza
-				</p>
-			</div>
+			<XyzTransition
+				appear
+				duration="auto">
+				<div
+					class="avatar-fix"
+					xyz="fade flip-down stagger duration-15 delay-15 ease-out-back">
+					<p :class="state.mobileVersion ? 'name-mobile' : 'name'">Karol</p>
+					<div :class="state.mobileVersion ? 'avatar-mobile' : 'avatar'"></div>
+					<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
+						Zawisza
+					</p>
+				</div>
+			</XyzTransition>
 			<div class="work-box">
 				<XyzTransition
 					:class="state.mobileVersion ? 'work-div-mobile' : 'work-div'"
@@ -31,7 +37,7 @@ export default {
 		state: { type: Object, required: true },
 		textDelay: {
 			type: Number,
-			default: 2000,
+			default: 2500,
 		},
 	},
 	data() {
@@ -107,8 +113,7 @@ export default {
 	position: relative;
 	width: 200px;
 	height: 200px;
-	background: url("../assets/Karol-Zawisza-2022-02-800x800.jpg") no-repeat right
-		center/cover;
+	background: url("../assets/kz250x250.png") no-repeat right center/cover;
 	border-radius: 50%;
 	border: 5px solid v-bind("state.colorMain");
 }
@@ -118,8 +123,7 @@ export default {
 	position: relative;
 	width: 120px;
 	height: 120px;
-	background: url("../assets/Karol-Zawisza-2022-02-800x800.jpg") no-repeat right
-		center/cover;
+	background: url("../assets/kz200x200.png") no-repeat right center/cover;
 	border-radius: 50%;
 	border: 5px solid v-bind("state.colorMain");
 }

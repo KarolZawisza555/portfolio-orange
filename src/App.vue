@@ -44,7 +44,7 @@ const state = computed(() => {
 	<XyzTransition
 		appear
 		duration="auto">
-		<div xyz="fade flip-down stagger duration-20 delay-2 ease-out-back">
+		<div xyz="fade flip-down stagger duration-15 delay-2 ease-out-back">
 			<NavBar
 				:randomNum="randomNum"
 				:state="state"
