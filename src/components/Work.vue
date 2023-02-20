@@ -21,11 +21,12 @@
 						>{{ tab.place }}</span
 					>
 				</template>
+				<p class="date-style">{{ tab.when }}</p>
 				<span
 					:class="
 						state.mobileVersion ? 'work-header-text-mobile' : 'work-header-text'
-					"
-					>{{ tab.content }}</span
+					">
+					{{ tab.content }}</span
 				>
 			</AccordionTab>
 		</Accordion>
@@ -42,22 +43,26 @@ export default {
 				{
 					title: "Junior Frontend developer",
 					place: "Makolab",
-					content: `Work with back-end developers to integrate UI componentswith APIs and databasesGather and refine specifications and requirements based ontechnical requirements or UX designDebug errors, troubleshoot issues, and perform routineperformance optimizationsWrite high-quality, scalable, and reusable code.`,
+					when: "Aug 2021 - Dec 2022",
+					content: `Work with back-end developers to integrate UI components with APIs and databases Gather and refine specifications and requirements based on technical requirements or UX design Debug errors, troubleshoot issues, and perform routine performance optimizations Write high-quality, scalable, and reusable code.`,
 				},
 				{
 					title: "Freelancer",
 					place: "self-employment",
+					when: "Feb 2021 – Apr 2021",
 					content: `Developing and maintaining the front-end of websites and web applications using technologies such as HTML, CSS, and JavaScript`,
 				},
 				{
 					title: "Electrical specialist",
 					place: "Strunobet Kuzki",
-					content: `Preparation of technical and technological documentationContact with international clientsCreating 2D CAD diagrams and 3D modelsDesigning power systems in accordance with customerrequirements`,
+					when: "Dec 2017 – Apr 2020",
+					content: `Preparation of technical and technological documentation Contact with international clients Creating 2D CAD diagrams and 3D models Designing power systems in accordance with customer requirements`,
 				},
 				{
 					title: "Automation foreman",
 					place: "Cerrad Starachowice",
-					content: `Supervising machines and devices in terms ofelectromechanicsDiagnosis of failures and their removalControl and supervision of the production process in SCADA software`,
+					when: "Sep 2016 – Nov 2017",
+					content: `Supervising machines and devices in terms of electromechanics Diagnosis of failures and their removal Control and supervision of the production process in SCADA software`,
 				},
 			],
 		};
@@ -96,11 +101,19 @@ export default {
 	color: v-bind("state.colorLight");
 	font-size: 26px;
 	margin-left: 10px;
+	margin-right: 5px;
 }
 
 .work-header-place-mobile {
 	color: v-bind("state.colorLight");
 	font-size: 18px;
 	margin-left: 11px;
+	margin-right: 5px;
+}
+
+.date-style {
+	font-weight: bolder;
+	font-size: 20px;
+	text-align: center;
 }
 </style>

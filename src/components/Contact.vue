@@ -9,20 +9,18 @@
 			<span class="contact-span">570-096-077</span>
 		</p>
 		<p class="email">
-			<Icon
-				:width="40"
-				icon="material-symbols:mail-rounded"
-				class="contact-icon-class"
-				:color="state.colorMain" />
-			<span class="contact-span">inz.zawisza.karol@gmail.com</span>
-		</p>
-		<p class="linkedin">
-			<Icon
-				:width="40"
-				icon="mdi-linkedin"
-				class="contact-icon-class"
-				:color="state.colorMain" />
-			<span class="contact-span">linkedin.com/in/karol-zawisza</span>
+			<a href="mailto:inz.zawisza.karol@gmail.com">
+				<Icon
+					:color="state.colorMain"
+					icon="material-symbols:mail-rounded"
+					class="icon-mail" />
+			</a>
+			<a href="https://www.linkedin.com/in/karol-zawisza">
+				<Icon
+					:color="state.colorMain"
+					icon="mdi-linkedin"
+					class="icon-mail" />
+			</a>
 		</p>
 	</div>
 </template>
