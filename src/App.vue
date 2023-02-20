@@ -24,8 +24,8 @@ const colorList = [
 	"rgb(251,140,0)", // 5  roange
 	"rgb(209,183,88)", // 6  yellow
 	"rgb(25,131,27)", // 7  green
-	"rgb(125, 152, 125)", // 8  xxx
-	"rgb(191,224,176)", // 9 xxx
+	"rgb(30, 216, 58)", // 8  sharp green
+	"rgb(26,143,217)", // 9 nice blue
 ];
 const { width, height } = useWindowSize();
 const changeColor = (newValue) => {
