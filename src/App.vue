@@ -16,21 +16,20 @@ import Contact from "./components/Contact.vue";
 const randomNum = ref(1);
 randomNum.value = Math.floor(Math.random() * 10);
 const colorList = [
-	"rgb(51,85,200)",
-	"rgb(97,228,8)",
-	"rgb(20,143,94)",
-	"rgb(233,17,51)",
-	"rgb(32,194,240)",
-	"rgb(253, 19, 42)",
-	"rgb(88,178,222)",
-	"rgb(209,183,88)",
-	"rgb(66, 165, 246)",
-	"rgb(73,141,176)",
+	"rgb(36,72,191)", // 0 OK blue
+	"rgb(97,228,8)", // 1 OK green lemon
+	"rgb(20,143,94)", // 2 OK easy dark green
+	"rgb(233,17,51)", // 3 red lipstick
+	"rgb(32,194,240)", // 4 ligt easy blue
+	"rgb(251,140,0)", // 5  roange
+	"rgb(209,183,88)", // 6  yellow
+	"rgb(25,131,27)", // 7  green
+	"rgb(125, 152, 125)", // 8  xxx
+	"rgb(191,224,176)", // 9 xxx
 ];
 const { width, height } = useWindowSize();
 const changeColor = (newValue) => {
 	randomNum.value = Math.floor(Math.random() * 10);
-	console.log(newValue);
 };
 const state = computed(() => {
 	return {
@@ -46,7 +45,6 @@ const state = computed(() => {
 		appear
 		duration="auto">
 		<div xyz="fade flip-down stagger duration-20 delay-2 ease-out-back">
-			{{ randomNum }}
 			<NavBar
 				:randomNum="randomNum"
 				:state="state"
