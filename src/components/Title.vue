@@ -6,7 +6,7 @@
 				duration="auto">
 				<div
 					class="avatar-fix"
-					xyz="fade flip-down stagger duration-15 delay-15 ease-out-back">
+					xyz="fade flip-down stagger duration-10 delay-15 ease-out-back">
 					<p :class="state.mobileVersion ? 'name-mobile' : 'name'">Karol</p>
 					<div :class="state.mobileVersion ? 'avatar-mobile' : 'avatar'"></div>
 					<p :class="state.mobileVersion ? 'surname-mobile' : 'surname'">
