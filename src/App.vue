@@ -71,6 +71,7 @@ const state = computed(() => {
 				:cursorBlinkInterval="500"
 				:reverseDelay="10" />
 			<Work :state="state" />
+			<HorizontalLine :state="state" />
 			<TypeText
 				text="/my-projects"
 				loop

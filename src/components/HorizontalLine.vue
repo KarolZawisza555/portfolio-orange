@@ -11,7 +11,7 @@ export default {
 
 <style scoped>
 hr {
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 	height: 3px;
 	background-image: linear-gradient(
