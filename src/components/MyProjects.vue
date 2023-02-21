@@ -26,11 +26,13 @@
 					<template #footer>
 						<div class="card-buttons">
 							<Button
+								href="https://github.com/KarolZawisza555"
 								label="Github"
 								class="button-github" />
 							<Button
 								label="Online"
-								class="button-online" />
+								class="button-online"
+								href="https://github.com/KarolZawisza555" />
 						</div>
 					</template>
 				</Card>
@@ -42,13 +44,12 @@
 <script>
 import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
-import foto1 from "../assets/foto1.png"
-import foto2 from "../assets/foto2.png"
-import foto3 from "../assets/foto3.png"
-import foto4 from "../assets/foto4.png"
-import foto5 from "../assets/foto5.png"
-import foto6 from "../assets/foto6.png"
-
+import foto1 from "../assets/foto1.png";
+import foto2 from "../assets/foto2.png";
+import foto3 from "../assets/foto3.png";
+import foto4 from "../assets/foto4.png";
+import foto5 from "../assets/foto5.png";
+import foto6 from "../assets/foto6.png";
 
 export default {
 	name: "MyProjects",
@@ -80,40 +81,35 @@ export default {
 					description: "Vue3 QUASAR",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						foto2,
+					image: foto2,
 				},
 				{
 					title: "Vuetify & Apex chart",
 					description: "VUE3 PINIA Vuetify",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						foto3,
+					image: foto3,
 				},
 				{
 					title: "Bootstrap tests",
 					description: "Bootstrap learn",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						foto4,
+					image: foto4,
 				},
 				{
 					title: "RegistrationVuelidate",
 					description: "",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						foto5,
+					image: foto5,
 				},
 				{
 					title: "ICONS COLOR AND SIZE",
 					description: "how to use icons for vue3",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						foto6,
+					image: foto6,
 				},
 			],
 		};
