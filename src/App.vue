@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed,onMounted } from "vue";
 
 import { useWindowSize } from "@vueuse/core";
 import IconCarousel from "./components/IconCarousel.vue";
@@ -13,6 +13,9 @@ import Work from "./components/Work.vue";
 import Footer from "./components/Footer.vue";
 import Contact from "./components/Contact.vue";
 
+onMounted(() => {
+    window.scrollTo(0, 1);
+})
 
 const randomNum = ref(1);
 randomNum.value = Math.floor(Math.random() * 10);
