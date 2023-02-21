@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed,onMounted } from "vue";
 
 import { useWindowSize } from "@vueuse/core";
 import IconCarousel from "./components/IconCarousel.vue";
@@ -13,10 +13,16 @@ import Work from "./components/Work.vue";
 import Footer from "./components/Footer.vue";
 import Contact from "./components/Contact.vue";
 
+onMounted(() => {
+	window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+})
+
 const randomNum = ref(1);
 randomNum.value = Math.floor(Math.random() * 10);
 const colorList = [
-	"rgb(36,72,191)", // 0 OK blue
+	"rgb(146,200,192)", // 0 OK blue
 	"rgb(97,228,8)", // 1 OK green lemon
 	"rgb(20,143,94)", // 2 OK easy dark green
 	"rgb(233,17,51)", // 3 red lipstick
