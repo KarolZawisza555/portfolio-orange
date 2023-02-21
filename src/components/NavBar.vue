@@ -1,17 +1,17 @@
 <template>
 	<nav class="container-nav">
 		<div class="w-50">
-			<a href="https://github.com/KarolZawisza555">
-				<Icon
-				:color="state.colorLight"
-				icon="line-md:linkedin"
-				class="icon-linkedin" />
-			</a>
 			<a href="https://www.linkedin.com/in/karol-zawisza">
 				<Icon
-				:color="state.colorLight"
-				icon="mdi:github"
-				class="icon-github" />
+					:color="state.colorLight"
+					icon="line-md:linkedin"
+					class="icon-linkedin" />
+			</a>
+			<a href="https://github.com/KarolZawisza555">
+				<Icon
+					:color="state.colorLight"
+					icon="mdi:github"
+					class="icon-github" />
 			</a>
 		</div>
 		<div class="container-mail w-50">
