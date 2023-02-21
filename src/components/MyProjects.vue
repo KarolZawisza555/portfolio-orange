@@ -20,7 +20,7 @@
 					</template>
 					<template #content>
 						<p class="mainColor">
-							{{ project.title }}
+							{{ project.description }}
 						</p>
 					</template>
 					<template #footer>
@@ -42,6 +42,13 @@
 <script>
 import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
+import foto1 from "../assets/foto1.png"
+import foto2 from "../assets/foto2.png"
+import foto3 from "../assets/foto3.png"
+import foto4 from "../assets/foto4.png"
+import foto5 from "../assets/foto5.png"
+import foto6 from "../assets/foto6.png"
+
 
 export default {
 	name: "MyProjects",
@@ -49,6 +56,13 @@ export default {
 	components: {
 		Carousel,
 		Slide,
+		foto1,
+		foto1,
+		foto2,
+		foto3,
+		foto4,
+		foto5,
+		foto6,
 	},
 	data() {
 		return {
@@ -56,43 +70,50 @@ export default {
 			projectList: [
 				{
 					title: "Vuevalidate",
-					description: "lorem4",
+					description: "VUE 3 VUEVALIDATE ",
 					githubLink: "",
 					onlineLink: "",
-					image:
-						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+					image: foto1,
 				},
 				{
 					title: "Quasar",
-					description: "lorem4",
+					description: "Vue3 QUASAR",
 					githubLink: "",
 					onlineLink: "",
 					image:
-						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+						foto2,
 				},
 				{
 					title: "Vuetify & Apex chart",
-					description: "lorem4",
+					description: "VUE3 PINIA Vuetify",
 					githubLink: "",
 					onlineLink: "",
 					image:
-						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+						foto3,
 				},
 				{
-					title: "Portfolio Vuetify",
-					description: "lorem4",
+					title: "Bootstrap tests",
+					description: "Bootstrap learn",
 					githubLink: "",
 					onlineLink: "",
 					image:
-						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+						foto4,
 				},
 				{
 					title: "RegistrationVuelidate",
-					description: "lorem4",
+					description: "",
 					githubLink: "",
 					onlineLink: "",
 					image:
-						"https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png",
+						foto5,
+				},
+				{
+					title: "ICONS COLOR AND SIZE",
+					description: "how to use icons for vue3",
+					githubLink: "",
+					onlineLink: "",
+					image:
+						foto6,
 				},
 			],
 		};

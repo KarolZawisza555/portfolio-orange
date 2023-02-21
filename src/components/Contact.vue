@@ -1,13 +1,14 @@
 <template>
 	<div class="contact-container">
-		<p class="phone">
+		<div class="phone">
 			<Icon
 				icon="mdi-phone"
 				class="contact-icon-class"
 				:width="26"
 				:color="state.colorMain" />
-			<span class="contact-span">570-096-077</span>
-		</p>
+			<a href="tel:570096077" class="phone-call" :color="state.colorMain">CALL ME</a>
+			<p class="contact-span">570-096-077</p>
+		</div>
 		<p class="email">
 			<a href="mailto:inz.zawisza.karol@gmail.com">
 				<Icon
@@ -65,5 +66,9 @@ export default {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+}
+.phone-call{
+	color: v-bind("state.colorMain");
+	font-size:32px
 }
 </style>
