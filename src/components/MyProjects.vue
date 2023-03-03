@@ -25,14 +25,16 @@
 					</template>
 					<template #footer>
 						<div class="card-buttons">
-							<Button
+							<a
 								href="https://github.com/KarolZawisza555"
-								label="Github"
-								class="button-github" />
-							<Button
-								label="Online"
-								class="button-online"
-								href="https://github.com/KarolZawisza555" />
+								class="button-github">
+								Github
+							</a>
+							<a
+								class="button-github"
+								href="https://github.com/KarolZawisza555">
+								Online
+							</a>
 						</div>
 					</template>
 				</Card>
@@ -133,13 +135,17 @@ export default {
 	background-color: #3c3d43;
 }
 .button-github {
+	text-decoration: none;
 	background-color: transparent;
+	padding: 10px;
 	border: 2px solid v-bind("state.colorMain");
-	margin-right: 5px;
+	border-radius: 4px;
+	margin-right: 10px;
 	color: v-bind("state.colorMain");
 }
 .button-online {
 	background-color: transparent;
+	width: 130px;
 	border: 2px solid v-bind("state.colorMain");
 	color: v-bind("state.colorMain");
 }
