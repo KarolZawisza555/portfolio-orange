@@ -14,9 +14,9 @@
 			<div
 				class="page-features"
 				xyz="fade flip-down stagger duration-10 delay-2 ease-out-back">
-				<div class="feature-item xyz-nested">sssssss</div>
-				<div class="feature-item xyz-nested">sssssss</div>
-				<div class="feature-item xyz-nested">sssssssss</div>
+				<div class="feature-item xyz-nested">1</div>
+				<div class="feature-item xyz-nested">2</div>
+				<div class="feature-item xyz-nested">3</div>
 			</div>
 			<div
 				class="page-section"
@@ -24,9 +24,9 @@
 				<div
 					class="section-left"
 					xyz="fade left stagger">
-					<div class="section-item xyz-nested">sssssss</div>
-					<div class="section-item xyz-nested">aaaaaaa</div>
-					<div class="section-item xyz-nested">ssssssssssssss</div>
+					<div class="section-item xyz-nested">4</div>
+					<div class="section-item xyz-nested">5</div>
+					<div class="section-item xyz-nested">6</div>
 				</div>
 				<div
 					class="section-right xyz-nested"
