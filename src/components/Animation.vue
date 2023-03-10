@@ -41,9 +41,9 @@
 				<div
 					class="footer-right"
 					xyz="fade up stagger ease-in-out delay-10">
-					<div class="footer-item xyz-nested"></div>
-					<div class="footer-item xyz-nested"></div>
-					<div class="footer-item xyz-nested"></div>
+					<div class="footer-item xyz-nested">7</div>
+					<div class="footer-item xyz-nested">8</div>
+					<div class="footer-item xyz-nested">9</div>
 				</div>
 			</div>
 		</div>
