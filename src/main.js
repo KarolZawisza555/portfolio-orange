@@ -18,8 +18,8 @@ import AccordionTab  from 'primevue/accordiontab';
 import Fieldset   from 'primevue/fieldset';
 
 const app = createApp(App);
-app.use(MotionPlugin)
 app.use(VueAnimXyz)
+app.use(MotionPlugin)
 app.use(PrimeVue)
 app.component('Icon',Icon)
 app.component('Card',Card)
