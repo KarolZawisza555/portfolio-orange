@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<p class="footer-text">2023 <span class="logo"> KZ </span></p>
+		<p class="footer-text">2023 <span class="logo"> KZ 2023 </span></p>
 	</footer>
 </template>
 
